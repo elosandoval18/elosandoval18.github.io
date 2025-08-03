@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Eloísa Sandoval</title>
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">Eloísa Sandoval</a>
+
+            <div class="language-selector">
+                <button class="lang-btn" id="lang-en"><a href="projects.html">EN</a></button>
+                <div class="world-icon"></div>
+                <button class="lang-btn active" id="lang-es"><a href="projects_es.html">ES</a></button>
+            </div>
+
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#about" onclick="closeMenu()">Acerca</a></li>
+                <li><a href="index.html#demo-reels" onclick="closeMenu()">Demo Reels</a></li>
+                <li><a href="index.html#skills" onclick="closeMenu()">Habilidades</a></li>
+                <li><a href="projects.html" class="active" onclick="closeMenu()">Proyectos</a></li>
+                <li><a href="index.html#cv" onclick="closeMenu()">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Proyectos</h1>
+            <p class="page-subtitle">A showcase of my diverse audio work and creative processes</p>
+        </div>
+    </header>
+
+    <section class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&h=400&fit=crop" alt="Indie Game Audio">
+                        <div class="project-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Game Audio</div>
+                        <h3 class="project-title">Mystical Forest Adventure</h3>
+                        <p class="project-description">Complete audio implementation for an indie adventure game featuring dynamic music, interactive sound effects, and immersive 3D audio landscapes.</p>
+                        <div class="project-tags">
+                            <span class="tag">Unity</span>
+                            <span class="tag">Wwise</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">3D Audio</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Play Demo</a>
+                            <a href="#" class="project-link">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=600&h=400&fit=crop" alt="Short Film Audio">
+                        <div class="project-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Film Audio</div>
+                        <h3 class="project-title">"Echoes" Short Film</h3>
+                        <p class="project-description">Full post-production audio for a psychological thriller short film including dialogue editing, foley design, and 5.1 surround sound mixing.</p>
+                        <div class="project-tags">
+                            <span class="tag">Pro Tools</span>
+                            <span class="tag">5.1 Mixing</span>
+                            <span class="tag">Foley</span>
+                            <span class="tag">ADR</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Watch Film</a>
+                            <a href="#" class="project-link">Audio Breakdown</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop" alt="Concert Audio">
+                        <div class="project-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Live Sound</div>
+                        <h3 class="project-title">Festival Audio Setup</h3>
+                        <p class="project-description">Technical audio crew member for a 3-day music festival, managing live sound mixing and monitoring for multiple stages and artists.</p>
+                        <div class="project-tags">
+                            <span class="tag">Live Mixing</span>
+                            <span class="tag">Monitor Setup</span>
+                            <span class="tag">Digital Consoles</span>
+                            <span class="tag">RF Systems</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Event Photos</a>
+                            <a href="#" class="project-link">Technical Specs</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop" alt="Interactive Installation">
+                        <div class="project-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Interactive Audio</div>
+                        <h3 class="project-title">Sound Sculpture Installation</h3>
+                        <p class="project-description">Interactive audio installation using motion sensors and Pure Data to create responsive soundscapes that react to visitor movement.</p>
+                        <div class="project-tags">
+                            <span class="tag">Pure Data</span>
+                            <span class="tag">Sensors</span>
+                            <span class="tag">Interactive</span>
+                            <span class="tag">Installation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Experience Demo</a>
+                            <a href="#" class="project-link">Technical Setup</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop" alt="Podcast Production">
+                        <div class="project-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Podcast Audio</div>
+                        <h3 class="project-title">"Tech Talks" Podcast Series</h3>
+                        <p class="project-description">Complete audio production for a weekly tech podcast including recording, editing, mixing, and mastering for multiple distribution platforms.</p>
+                        <div class="project-tags">
+                            <span class="tag">Reaper</span>
+                            <span class="tag">Podcast Editing</span>
+                            <span class="tag">Remote Recording</span>
+                            <span class="tag">Mastering</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Listen</a>
+                            <a href="#" class="project-link">Production Notes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1598653222000-6b7b7a552625?w=600&h=400&fit=crop" alt="VR Audio">
+                        <div class="project-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">VR Audio</div>
+                        <h3 class="project-title">Virtual Reality Experience</h3>
+                        <p class="project-description">Spatial audio design for a VR educational experience, implementing binaural audio and interactive sound objects in Unreal Engine.</p>
+                        <div class="project-tags">
+                            <span class="tag">Unreal Engine</span>
+                            <span class="tag">Spatial Audio</span>
+                            <span class="tag">VR</span>
+                            <span class="tag">Binaural</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">VR Demo</a>
+                            <a href="#" class="project-link">Audio Showcase</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">Behind the Scenes</h2>
+            <p style="text-align: center; color: rgba(173, 182, 196, 0.8); font-size: 1.1rem; margin-bottom: 2rem;">A glimpse into my creative process and workflow</p>
+            <div class="process-grid">
+                <div class="process-item">
+                    <div class="process-media">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&h=600&fit=crop" alt="Studio Setup">
+                    </div>
+                    <div class="process-content">
+                        <h3 class="process-title">Studio Setup & Recording</h3>
+                        <p class="process-description">My home studio setup featuring acoustic treatment, multiple microphones, and professional monitoring. This space allows me to capture high-quality recordings for foley, ADR, and music production.</p>
+                        <div class="process-details">
+                            <span class="process-date">January 2024</span>
+                            <span class="process-type">Photo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process-item">
+                    <div class="process-media">
+                        <video muted loop>
+                            <source src="tu_video.mp4" type="video/mp4">
+                            <source src="tu_video.mov" type="video/quicktime">
+                            <source src="tu_video.webm" type="video/webm">
+                            <!-- Fallback para navegadores que no soportan video -->
+                            <img src="fallback_image.jpg" alt="Video no disponible">
+                        </video>
+                        <div class="video-overlay">▶</div>
+                    </div>
+                    <div class="process-content">
+                        <h3 class="process-title">Wwise Integration Workflow</h3>
+                        <p class="process-description">A time-lapse video showing my process of implementing interactive audio in Wwise, from creating sound banks to setting up real-time parameters and testing in-engine integration.</p>
+                        <div class="process-details">
+                            <span class="process-date">December 2023</span>
+                            <span class="process-type">Video</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process-item">
+                    <div class="process-media">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop" alt="Field Recording">
+                    </div>
+                    <div class="process-content">
+                        <h3 class="process-title">Field Recording Session</h3>
+                        <p class="process-description">Capturing environmental sounds for a nature documentary. Using portable recording equipment to gather authentic soundscapes that would later be layered and processed in post-production.</p>
+                        <div class="process-details">
+                            <span class="process-date">November 2023</span>
+                            <span class="process-type">Photo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process-item">
+                    <div class="process-media">
+                        <video muted loop>
+                            <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-overlay">▶</div>
+                    </div>
+                    <div class="process-content">
+                        <h3 class="process-title">Pro Tools Mixing Session</h3>
+                        <p class="process-description">Screen recording of a film mixing session in Pro Tools, showing the process of balancing dialogue, music, and sound effects while preparing the final 5.1 surround sound mix.</p>
+                        <div class="process-details">
+                            <span class="process-date">October 2023</span>
+                            <span class="process-type">Video</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process-item">
+                    <div class="process-media">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop" alt="Live Sound Setup">
+                    </div>
+                    <div class="process-content">
+                        <h3 class="process-title">Live Concert Preparation</h3>
+                        <p class="process-description">Setting up the sound system and testing monitor feeds before a live concert. This involves coordinating with the band for sound check and ensuring optimal audio quality for both the audience and performers.</p>
+                        <div class="process-details">
+                            <span class="process-date">September 2023</span>
+                            <span class="process-type">Photo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process-item">
+                    <div class="process-media">
+                        <video muted loop>
+                            <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-overlay">▶</div>
+                    </div>
+                    <div class="process-content">
+                        <h3 class="process-title">Unity Audio Implementation</h3>
+                        <p class="process-description">Demonstrating the implementation of dynamic audio systems in Unity, including scripting audio triggers, managing audio pools, and creating responsive soundscapes that react to player actions.</p>
+                        <div class="process-details">
+                            <span class="process-date">August 2023</span>
+                            <span class="process-type">Video</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process-item">
+                    <div class="process-media">
+                        <img src="https://images.unsplash.com/photo-1598653222000-6b7b7a552625?w=800&h=600&fit=crop" alt="Foley Recording">
+                    </div>
+                    <div class="process-content">
+                        <h3 class="process-title">Foley Recording Session</h3>
+                        <p class="process-description">Creating custom sound effects in my foley studio setup. Using everyday objects and creative techniques to generate authentic sounds that perfectly sync with the visual elements on screen.</p>
+                        <div class="process-details">
+                            <span class="process-date">July 2023</span>
+                            <span class="process-type">Photo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process-item">
+                    <div class="process-media">
+                        <video muted loop>
+                            <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-overlay">▶</div>
+                    </div>
+                    <div class="process-content">
+                        <h3 class="process-title">Interactive Installation Testing</h3>
+                        <p class="process-description">Testing the motion-responsive audio installation before exhibition. The video shows how the system detects movement and translates it into generative soundscapes using Pure Data patches.</p>
+                        <div class="process-details">
+                            <span class="process-date">June 2023</span>
+                            <span class="process-type">Video</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="back-home">
+        <a href="index_es.html" class="back-button">
+            ← Regresar a Inicio
+        </a>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('nav');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (!nav.contains(event.target) && navLinks.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+
+        // Video controls
+        document.querySelectorAll('video').forEach(video => {
+            video.addEventListener('click', function() {
+                if (this.paused) {
+                    this.play();
+                    this.nextElementSibling.style.opacity = '0';
+                } else {
+                    this.pause();
+                    this.nextElementSibling.style.opacity = '0.8';
+                }
+            });
+
+            video.addEventListener('ended', function() {
+                this.nextElementSibling.style.opacity = '0.8';
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe project cards and process items
+        document.querySelectorAll('.project-card, .process-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1)';
+            observer.observe(el);
+        });
+
+        // Navigation background on scroll
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            const currentScrollY = window.scrollY;
+            
+            if (currentScrollY > 50) {
+                nav.style.background = 'rgba(0, 8, 20, 0.95)';
+                nav.style.borderBottom = '1px solid rgba(247, 177, 171, 0.3)';
+            } else {
+                nav.style.background = 'rgba(0, 8, 20, 0.8)';
+                nav.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+            }
+            
+            // Hide/show nav on scroll (only on desktop)
+            if (window.innerWidth > 768) {
+                if (currentScrollY > lastScrollY && currentScrollY > 200) {
+                    nav.style.transform = 'translateY(-100%)';
+                } else {
+                    nav.style.transform = 'translateY(0)';
+                }
+            }
+            
+            lastScrollY = currentScrollY;
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                document.getElementById('navLinks').classList.remove('active');
+                document.querySelector('.menu-toggle').classList.remove('active');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Project link interactions
+        document.querySelectorAll('.project-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Here you would add actual functionality for project links
+                console.log('Project link clicked:', this.textContent);
+            });
+        });
+
+        // Play button interactions
+        document.querySelectorAll('.play-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Here you would add actual functionality for media playback
+                console.log('Play button clicked');
+            });
+        });
+    </script>
+</body>
+</html>
