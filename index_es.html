@@ -131,8 +131,8 @@
 
     <section id="cv" class="cv-download">
         <div class="container">
-            <h2>Resume</h2>
-            <a href="https://drive.google.com/file/d/15Y2skE8wkC5A-S8nBF7l2ogcUz63Dg9w/view?usp=drive_link" class="cv-button">Download CV</a>
+            <h2>Curriculum Vitae</h2>
+            <a href="https://drive.google.com/file/d/15Y2skE8wkC5A-S8nBF7l2ogcUz63Dg9w/view?usp=drive_link" class="cv-button">Descargar CV</a>
         </div>
     </section>
 
@@ -177,7 +177,32 @@
            // el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
          //   el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
        // });
-        
+                // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('nav');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (!nav.contains(event.target) && navLinks.classList.contains('active')) {
+                closeMenu();
+            }
+        });
 
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

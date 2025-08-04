@@ -109,7 +109,7 @@
                         <li>Reaper</li>
                         <li>Stereo & 5.1 Mixing</li>
                         <li>ADR, Foley & Source Recording</li>
-                        <li>Field Recording</li>
+                        <li>Field Recordign</li>
                         <li>Production Sound</li>
                         <li>Dialogue, BGs, SFX & Foley Editing</li>
                     </ul>
@@ -177,7 +177,32 @@
            // el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
          //   el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
        // });
-        
+                // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('nav');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (!nav.contains(event.target) && navLinks.classList.contains('active')) {
+                closeMenu();
+            }
+        });
 
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

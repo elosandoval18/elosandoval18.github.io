@@ -291,7 +291,7 @@
 
         /* About Section */
         .about {
-            padding: 120px 0;
+            padding: 40px 0;
             background: #000814;
             position: relative;
         }
@@ -364,7 +364,7 @@
 
         /* Demo Reels Section */
         .demo-reels {
-            padding: 120px;
+            padding: 40px;
             background: #000814;
             position: relative;
         }
@@ -444,7 +444,7 @@
 
         /* Skills Section */
         .skills {
-            padding: 120px 0;
+            padding: 80px 0;
             background: #000814;
         }
 
@@ -511,7 +511,7 @@
 
         /* CV Download Section */
         .cv-download {
-            padding: 80px 0;
+            padding: 60px 0;
             text-align: center;
             background: #000814;
         }
@@ -589,9 +589,14 @@
                 padding: 0 20px;
             }
 
+            .logo{
+                font-size: 1.4rem;
+            }
+
             /* Mobile navigation - SHOW HAMBURGER MENU */
             .menu-toggle {
                 display: flex;
+                margin-left: auto;
             }
 
             .nav-links {
@@ -650,7 +655,7 @@
 
             /* Sections */
             .about {
-                padding: 80px 0;
+                padding: 40px 0;
             }
 
             .about-content {
@@ -664,7 +669,7 @@
             }
 
             .demo-reels {
-                padding: 80px 0;
+                padding: 40px 0;
             }
 
             .reels-grid {
@@ -677,7 +682,7 @@
             }
 
             .skills {
-                padding: 80px 0;
+                padding: 40px 0;
             }
 
             .skills-grid {
@@ -713,6 +718,10 @@
                 padding: 0 15px;
             }
 
+            .logo{
+                font-size: 1.4rem;
+            }
+
             .hero h1 {
                 font-size: clamp(2rem, 10vw, 3rem);
             }
@@ -727,5 +736,6 @@
 
             .about-text {
                 font-size: 1rem;
+                text-align: justify;
             }
         }
