@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eloísa Sandoval - Sound Designer</title>
     <link rel = "stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="Media\icon.png"> 
 
 </head>
 <body>
@@ -29,8 +30,8 @@
                 <li><a href="index_es.html#about" onclick="closeMenu()">Acerca</a></li>
                 <li><a href="index_es.html#demo-reels" onclick="closeMenu()">Demo Reels</a></li>
                 <li><a href="index_es.html#skills" onclick="closeMenu()">Habilidades</a></li>
-                <li><a href="projects_es.html" onclick="closeMenu()">Proyectos</a></li>
-                <li><a href="https://drive.google.com/file/d/15Y2skE8wkC5A-S8nBF7l2ogcUz63Dg9w/view?usp=drive_link" onclick="closeMenu()">CV</a></li>
+                <!-- <li><a href="projects_es.html" onclick="closeMenu()">Proyectos</a></li> !-->
+                <li><a href="https://drive.google.com/file/d/1rRNJrrzlZvdnD1IRJJuF-K9iOMjD1oy-/view?usp=drive_link" onclick="closeMenu()">CV</a></li>
             </ul>
         </div>
     </nav>
@@ -68,21 +69,41 @@
         </div>
     </section>
 
-    <section id="demo-reels" class="demo-reels">
+    <section class="demo-reels" id="demo-reels">
         <div class="container">
             <h2 class="section-title">Demo Reels</h2>
             <div class="reels-grid">
                 <div class="reel-card">
-                    <div class="reel-icon">◆</div>
-                    <h3 class="reel-title">Technical Audio Designer</h3>
-                    <p class="reel-description">Showcasing my work in game audio implementation, interactive sound design, and technical audio solutions for interactive media.</p>
-                    <a href="#" class="reel-button">Watch Reel</a>
+                    <div class="reel-media">
+                        <iframe 
+                            class="reel-iframe"
+                            src="https://player.vimeo.com/video/1107770572?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479" 
+                            frameborder="0" 
+                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            title="Technical Sound Design Demo Reel - Eloísa Sandoval">
+                        </iframe>
+                    </div>
+                    <div class="reel-content">
+                        <h3 class="reel-title">Diseño Sonoro Técnico</h3>
+                        <p class="reel-description">Implementación de audio para videojuegos, diseño de sonido interactivo y soluciones técnicas de audio para medios interactivos.</p>
+                    </div>
                 </div>
                 <div class="reel-card">
-                    <div class="reel-icon">◉</div>
-                    <h3 class="reel-title">Sound Designer</h3>
-                    <p class="reel-description">Featuring my audio post-production work for film, including dialogue editing, SFX design, and mixing in stereo and 5.1 formats.</p>
-                    <a href="#" class="reel-button">Watch Reel</a>
+                    <div class="reel-media">
+                        <iframe 
+                            class="reel-iframe"
+                            src="https://player.vimeo.com/video/1107770849?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479" 
+                            frameborder="0" 
+                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            title="Sound Design Demo Reel - Eloísa Sandoval">
+                        </iframe>
+                    </div>
+                    <div class="reel-content">
+                        <h3 class="reel-title">Diseño Sonoro</h3>
+                        <p class="reel-description">Postproducción de audio para cine, incluyendo edición y grabación de diálogos, diseño de efectos sonoros y mezcla en formatos estéreo y 5.1.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -132,7 +153,7 @@
     <section id="cv" class="cv-download">
         <div class="container">
             <h2>Curriculum Vitae</h2>
-            <a href="https://drive.google.com/file/d/15Y2skE8wkC5A-S8nBF7l2ogcUz63Dg9w/view?usp=drive_link" class="cv-button">Descargar CV</a>
+            <a href="https://drive.google.com/file/d/1rRNJrrzlZvdnD1IRJJuF-K9iOMjD1oy-/view?usp=drive_link" class="cv-button">Descargar CV</a>
         </div>
     </section>
 
@@ -147,37 +168,108 @@
         </div>
     </footer>
 
-    <script>
-
-        //
-        // Custom cursor
-        //const cursor = document.querySelector('.cursor');
-        //let mouseX = 0;
-        //let mouseY = 0;
-        //let cursorX = 0;
-        //let cursorY = 0;
-
-        //document.addEventListener('mousemove', (e) => {
-          //  mouseX = e.clientX;
-          //  mouseY = e.clientY;
-        //});
-
-        //function updateCursor() {
-          //  cursorX += (mouseX - cursorX) * 0.15;
-          //  cursorY += (mouseY - cursorY) * 0.15;
-        //    cursor.style.left = cursorX + 'px';
-            //cursor.style.top = cursorY + 'px';
-          //  requestAnimationFrame(updateCursor);
-        //}
-        //updateCursor();
-
-        // Cursor hover effects
-        //const hoverElements = document.querySelectorAll('a, button, .reel-card, .skill-category');
-        //hoverElements.forEach(el => {
-           // el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-         //   el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-       // });
-                // Mobile menu toggle
+  <script>
+        // Video control functionality
+        function initVideoControls() {
+            const reelCards = document.querySelectorAll('.reel-card');
+            
+            reelCards.forEach(card => {
+                const media = card.querySelector('.reel-media');
+                const video = card.querySelector('.reel-video');
+                const overlay = card.querySelector('.video-overlay');
+                const icon = card.querySelector('.reel-icon');
+                
+                // Click en el área del media (incluyendo overlay)
+                media.addEventListener('click', function(e) {
+                    toggleVideo(card);
+                });
+                
+                // Prevenir propagación del evento del video para evitar conflictos
+                video.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
+                
+                // Event listeners para cuando el video termina
+                video.addEventListener('ended', function() {
+                    stopVideo(card);
+                });
+                
+                // Manejar errores de carga del video
+                video.addEventListener('error', function() {
+                    console.log('Error loading video for card:', card.dataset.videoId);
+                });
+            });
+        }
+        
+        function toggleVideo(card) {
+            const video = card.querySelector('.reel-video');
+            const overlay = card.querySelector('.video-overlay');
+            
+            if (card.classList.contains('playing')) {
+                // Pausar video
+                pauseVideo(card);
+            } else {
+                // Reproducir video
+                playVideo(card);
+            }
+        }
+        
+        function playVideo(card) {
+            // Primero pausar todos los otros videos
+            pauseAllVideos();
+            
+            const video = card.querySelector('.reel-video');
+            const overlay = card.querySelector('.video-overlay');
+            
+            // Mostrar video y reproducir
+            video.style.display = 'block';
+            card.classList.add('playing');
+            overlay.innerHTML = '⏸';
+            
+            // Reproducir el video
+            video.play().catch(error => {
+                console.log('Error playing video:', error);
+                // Si hay error, volver al estado inicial
+                stopVideo(card);
+            });
+        }
+        
+        function pauseVideo(card) {
+            const video = card.querySelector('.reel-video');
+            const overlay = card.querySelector('.video-overlay');
+            
+            video.pause();
+            overlay.innerHTML = '▶';  // Cambia a play
+            card.classList.remove('playing');  // CLAVE: Remover el estado
+        }
+        
+        function stopVideo(card) {
+            const video = card.querySelector('.reel-video');
+            const overlay = card.querySelector('.video-overlay');
+            
+            video.pause();
+            video.currentTime = 0;
+            video.style.display = 'none';
+            card.classList.remove('playing');
+            overlay.innerHTML = '▶';
+        }
+        
+        function pauseAllVideos() {
+            const allCards = document.querySelectorAll('.reel-card');
+            allCards.forEach(card => {
+                if (card.classList.contains('playing')) {
+                    const video = card.querySelector('.reel-video');
+                    if (!video.paused) {
+                        pauseVideo(card);
+                    } else {
+                        // Si el video ya está pausado, solo actualizar la UI
+                        stopVideo(card);
+                    }
+                }
+            });
+        }
+        
+        // Mobile menu functionality
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             const menuToggle = document.querySelector('.menu-toggle');
@@ -185,120 +277,50 @@
             navLinks.classList.toggle('active');
             menuToggle.classList.toggle('active');
         }
-
-        function closeMenu() {
-            const navLinks = document.getElementById('navLinks');
-            const menuToggle = document.querySelector('.menu-toggle');
+        
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initVideoControls();
             
-            navLinks.classList.remove('active');
-            menuToggle.classList.remove('active');
-        }
-
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const nav = document.querySelector('nav');
-            const navLinks = document.getElementById('navLinks');
-            
-            if (!nav.contains(event.target) && navLinks.classList.contains('active')) {
-                closeMenu();
-            }
-        });
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
             });
         });
-
-        // Scroll animations
+        
+        // Pause videos when user scrolls away from the section
         const observerOptions = {
             threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
+            rootMargin: '0px'
         };
-
-        const observer = new IntersectionObserver((entries) => {
+        
+        const videoObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                if (!entry.isIntersecting) {
+                    // Si la sección de demo reels no está visible, pausar todos los videos
+                    if (entry.target.id === 'demo-reels') {
+                        pauseAllVideos();
+                    }
                 }
             });
         }, observerOptions);
-
-        document.querySelectorAll('.reel-card, .skill-category').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(50px)';
-            el.style.transition = 'all 0.8s cubic-bezier(0.4, 0.0, 0.2, 1)';
-            observer.observe(el);
-        });
-
-        // Parallax effect for floating shapes
-        document.addEventListener('mousemove', (e) => {
-            const shapes = document.querySelectorAll('.shape');
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
-            
-            shapes.forEach((shape, index) => {
-                const speed = (index + 1) * 0.5;
-                const xMove = (x - 0.5) * speed * 50;
-                const yMove = (y - 0.5) * speed * 50;
-                shape.style.transform += ` translate(${xMove}px, ${yMove}px)`;
-            });
-        });
-
-        // Navigation background on scroll
-        let lastScrollY = window.scrollY;
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            const currentScrollY = window.scrollY;
-            
-            if (currentScrollY > 100) {
-                nav.style.background = 'rgba(10, 10, 15, 0.95)';
-                nav.style.borderBottom = '1px solid rgba(247, 177, 171, 0.3)';
-            } else {
-                nav.style.background = 'rgba(10, 10, 15, 0.8)';
-                nav.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
-            }
-            
-            // Hide/show nav on scroll
-            if (currentScrollY > lastScrollY && currentScrollY > 200) {
-                nav.style.transform = 'translateY(-100%)';
-            } else {
-                nav.style.transform = 'translateY(0)';
-            }
-            
-            lastScrollY = currentScrollY;
-        });
-
-        // Sound wave animation control
-        const waveObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                const waveBars = entry.target.querySelectorAll('.wave-bar');
-                if (entry.isIntersecting) {
-                    waveBars.forEach((bar, index) => {
-                        bar.style.animationPlayState = 'running';
-                        bar.style.animationDelay = `${index * 0.1}s`;
-                    });
-                } else {
-                    waveBars.forEach(bar => {
-                        bar.style.animationPlayState = 'paused';
-                    });
-                }
-            });
-        });
-
-        const soundWave = document.querySelector('.sound-wave');
-        if (soundWave) {
-            waveObserver.observe(soundWave);
+        
+        // Observe the demo reels section
+        const demoReelsSection = document.getElementById('demo-reels');
+        if (demoReelsSection) {
+            videoObserver.observe(demoReelsSection);
         }
     </script>
 </body>
 </html>
+
+
